@@ -1,0 +1,9 @@
+.divide{
+    height: 100%;
+    width: 2px;
+    min-height: 400px;
+    background-color: grey;
+}
+p:hover{
+    background: blue;
+}

@@ -8,11 +8,20 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/v3.0.1/dist/mini-default.min.css">
 </head>
 <body>
-    <div calss='row'>
-        <div class='col-2'></div>
-        <div class='col-1'></div>
+    <div class='row'>
+        <div class='col-2'>
+            <nav>
+            {{#each data}}
+            <a>{{head}}</a>
+            {{/each}}
+            </nav>
+        </div>
+        <div class='col-1'>
+            <div class="divider"></div>
+        </div>
         <div class='col-9'></div>
     </div>
 </body>

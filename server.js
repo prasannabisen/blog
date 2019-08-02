@@ -8,11 +8,22 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
 app.get('/',(req,res)=>{
-    res.render('index')
+    db.findAll().then((data)=>{
+        res.render('index',{data})
+    }).catch(err=>{
+        console.log(err)
+    })
 })
 
 app.get('/add',(req,res)=>{
     res.render('add')
+})
+
+app.get('/read',(req,res)=>{
+    db.findAll().then((data)=>{
+        const k=data;
+        console.log(k)
+    })
 })
 
 app.post('/add',(req,res)=>{
@@ -27,8 +38,8 @@ app.post('/add',(req,res)=>{
 })
 
 db.sync().then(()=>{
-    app.listen(4742,()=>{
-        console.log('connecteds')
+    app.listen(3000,()=>{
+        console.log('connected')
     })
 })
 
