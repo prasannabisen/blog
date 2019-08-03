@@ -11,9 +11,8 @@ app.use(express.urlencoded({ extended: true }))
 app.get('/',(req,res)=>{
     db.findAll().then((data)=>{
         const k=req.query.blog;
-        const info=data[k];
-        console.log(info);
-        res.render('index',{data})
+        const mess=data[k];
+        res.render('index',{data,mess})
     }).catch(err=>{
         console.log(err)
     })

@@ -23,8 +23,10 @@
             <div class="divider"></div>
         </div>
         <div class='col-9'>
-            {{#if info}}
-            <p>{{head}}</p>
+            {{#if mess}}
+            <span class="head">{{mess.head}}</span>
+            <span class="date">{{mess.date}}</span>
+            <p>{{mess.info}}</p>
             {{/if}}
         </div>
     </div>

@@ -8,3 +8,14 @@ a:hover{
     background-color: blue;
     transform: scale(1.2);
 }
+.head{
+  font-size: 45px;
+}
+
+.date{
+  position: relative;
+  right:-400px;
+}
+body{
+  background: white;
+}
