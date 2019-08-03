@@ -2,8 +2,9 @@
     height: 100%;
     width: 2px;
     min-height: 400px;
-    background-color: grey;
+    background: grey;
   }
-p:hover{
-    background: blue;
+a:hover{
+    background-color: blue;
+    transform: scale(1.2);
 }

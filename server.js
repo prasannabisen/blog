@@ -2,6 +2,7 @@ const express=require('express')
 const app=express()
 const {db,sequelize}=require('./db')
 
+app.use(express.static('public'))
 app.set('view engine','hbs')
 
 app.use(express.json())
