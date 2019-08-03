@@ -9,8 +9,10 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
 app.get('/',(req,res)=>{
+    const k=req.query.blog;
     db.findAll().then((data)=>{
-        res.render('index',{data})
+        const info=data[k];
+        res.render('index',{data,info})
     }).catch(err=>{
         console.log(err)
     })
