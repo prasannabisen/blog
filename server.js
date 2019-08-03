@@ -9,10 +9,11 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
 app.get('/',(req,res)=>{
-    const k=req.query.blog;
     db.findAll().then((data)=>{
+        const k=req.query.blog;
         const info=data[k];
-        res.render('index',{data,info})
+        console.log(info);
+        res.render('index',{data})
     }).catch(err=>{
         console.log(err)
     })
